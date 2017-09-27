@@ -1,0 +1,16 @@
+{
+    "extends": [
+        "videoamp-react"
+    ],
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack.config.js"
+            }
+        }
+    },
+    "rules": {
+        "no-unused-expressions": "off",
+        "chai-friendly/no-unused-expressions": "error"
+    }
+}

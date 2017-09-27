@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProtectedRoute is accessible renders component 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
+  }
+  initialIndex={1}
+  keyLength={null}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Switch>
+      <ProtectedRoute
+        component={[Function]}
+        computedMatch={
+          Object {
+            "isExact": true,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+        isAccessible={true}
+        location={
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          }
+        }
+        path="/"
+        redirectToPath="/login"
+      >
+        <Route
+          computedMatch={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          path="/"
+          render={[Function]}
+        >
+          <component
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            staticContext={undefined}
+          >
+            <p>
+              Logged in
+            </p>
+          </component>
+        </Route>
+      </ProtectedRoute>
+    </Switch>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`ProtectedRoute is not accessible calls for redirect 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
+  }
+  initialIndex={1}
+  keyLength={null}
+>
+  <Router
+    history={
+      Object {
+        "action": "REPLACE",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/login",
+            "search": "",
+            "state": Object {
+              "from": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+            },
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/login",
+          "search": "",
+          "state": Object {
+            "from": Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          },
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Switch>
+      <ProtectedRoute
+        component={[Function]}
+        computedMatch={
+          Object {
+            "isExact": false,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+        isAccessible={false}
+        location={
+          Object {
+            "hash": "",
+            "pathname": "/login",
+            "search": "",
+            "state": Object {
+              "from": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+            },
+          }
+        }
+        path="/"
+        redirectToPath="/login"
+      >
+        <Route
+          computedMatch={
+            Object {
+              "isExact": false,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/login",
+              "search": "",
+              "state": Object {
+                "from": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+              },
+            }
+          }
+          path="/"
+          render={[Function]}
+        >
+          <Redirect
+            push={false}
+            to={
+              Object {
+                "pathname": "/login",
+                "state": Object {
+                  "from": Object {
+                    "hash": "",
+                    "pathname": "/login",
+                    "search": "",
+                    "state": Object {
+                      "from": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                    },
+                  },
+                },
+              }
+            }
+          />
+        </Route>
+      </ProtectedRoute>
+    </Switch>
+  </Router>
+</MemoryRouter>
+`;

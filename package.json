@@ -1,0 +1,61 @@
+{
+  "name": "react-router-protected-route",
+  "version": "1.0.0",
+  "description": "Route component that redirects unauthenticated users trying to access an auth-required route.",
+  "main": "build/src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VideoAmp/react-router-protected-route.git"
+  },
+  "author": "VideoAmp <geeks@videoamp.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/VideoAmp/react-router-protected-route/issues"
+  },
+  "homepage": "https://github.com/VideoAmp/react-router-protected-route",
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^15.5.4",
+    "react-router-dom": "^4.1.1"
+  },
+  "peerDependencies": {
+    "react": "^15.5.4",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-15": "^1.0.0",
+    "enzyme-to-json": "^3.0.0",
+    "eslint": "^4.7.2",
+    "eslint-config-videoamp-react": "^3.0.1",
+    "jest": "^21.2.0",
+    "react-dom": "15",
+    "react-test-renderer": "^16.0.0",
+    "regenerator-runtime": "^0.11.0",
+    "webpack": "^3.6.0"
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack",
+    "lint": "eslint src",
+    "test": "jest --env=jsdom"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./config/setupTests.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}
